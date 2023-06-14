@@ -1,3 +1,9 @@
 @echo off
+echo Activating virtual environment...
 call provenv\Scripts\activate
-python manage.py runserver
+
+echo Starting Gunicorn...
+gunicorn proyecto.wsgi:application --bind 0.0.0.0:%PORT%
+
+echo Deactivating virtual environment...
+deactivate
