@@ -1,0 +1,35 @@
+{% extends 'servisarg/base.html' %}
+{% load static %}
+
+{ {% block css_adicionales %}
+<link rel="stylesheet" href="{% static 'servisarg/css/inicio.css' %}">
+{% endblock %}}
+
+{%block titulo%}ServisArg{% endblock %}
+{% block encabezado %}
+    <h1>ServisArg</h1>
+    <h2>Bienvenido </h2>
+{% endblock %}
+
+{% block contenido %}
+
+    <section class="lista">
+        <h2>Categorias de Oficios</h2>
+
+        {% for categoria in lista_categorias %}
+            <article>
+                <p><b><a href="{% url 'trabajadores_categoria' categoria.id %}">{{ categoria.nombre }}</a></b></p>
+            
+            </article>
+        {% empty%}
+            <p>No hay trabajadores en la categoria seleccionada</p>
+        {% endfor%}
+    </section>  
+{% endblock %}
+
+        
+
+
+
+
+

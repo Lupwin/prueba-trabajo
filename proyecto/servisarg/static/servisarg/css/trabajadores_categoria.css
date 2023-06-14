@@ -1,0 +1,30 @@
+.article{
+    color: red;
+}
+.lista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    background-color: lightyellow;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    flex: 1
+    ;
+}
+a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: #333;
+    /* Cambia el color del texto */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+}
+
+a:hover,
+a:focus {
+    background-color: #f2f2f2;
+    /* Color de fondo al pasar el mouse o enfocar */
+}

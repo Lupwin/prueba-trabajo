@@ -1,0 +1,24 @@
+{% extends 'servisarg/base.html' %}
+{% load static %}
+
+{ {% block css_adicionales %}
+<link rel="stylesheet" href="{% static 'servisarg/css/contacto.css' %}">
+{% endblock %}}
+
+
+{%block titulo%}Contacto{% endblock %}
+{% block encabezado %}
+
+    <h1>Contacto</h1>
+{% endblock %}
+{% block contenido %} 
+    <form action="" method="POST">
+        {% csrf_token %}        
+        {{form.as_p}}  
+
+        <button type="submit" class="boton">Registrar</button>
+        <button type="reset" class="boton">Borrar formulario</button>
+
+    </form>
+
+{% endblock %}

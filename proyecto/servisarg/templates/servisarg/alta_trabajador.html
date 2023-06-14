@@ -1,0 +1,29 @@
+{% extends 'servisarg/base.html' %}
+{% load static %}
+
+{% block css_adicionales %}
+<link rel="stylesheet" href="{% static 'servisarg/css/alta_trabajador.css' %}">
+{% endblock %}
+
+<div class="container">
+    {% block titulo %}Alta de Trabajador{% endblock %}
+</div>
+
+{% block encabezado %}
+    <h1 class="text-center">Alta de Trabajador</h1>
+{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <form action="" method="POST"  enctype="multipart/form-data">
+        {% csrf_token %}        
+
+        {{ form.as_p }}
+        
+        <div class="container text-center">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="reset" class="btn btn-secondary">Borrar formulario</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
