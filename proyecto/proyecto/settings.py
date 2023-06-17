@@ -77,8 +77,15 @@ WSGI_APPLICATION = "proyecto.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES ={
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "trabajo_django",
+        "USER": "postgres",
+        "PASSWORD": "lupwin1404",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
+    }
 }
 
 
